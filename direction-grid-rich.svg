@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e5f7ff"/>
+      <stop offset="55%" stop-color="#f5fcff"/>
+      <stop offset="100%" stop-color="#eafff7"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="72%" cy="28%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#245b88" flood-opacity="0.18"/>
+    </filter>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1100" height="640" rx="56" fill="url(#bg)"/>
+  <rect width="1100" height="640" rx="56" fill="url(#grid)" opacity=".65"/>
+  <circle cx="865" cy="115" r="210" fill="url(#shine)"/>
+  <circle cx="120" cy="555" r="230" fill="#ffffff" opacity=".18"/>
+  
+  <g stroke="#1a91d6" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M490 510H930"/>
+    <path d="M520 510l82-250 82 250M690 510l82-250 82 250"/>
+    <path d="M570 350h260M548 430h304"/>
+    <path d="M605 260h165"/>
+  </g>
+  <g fill="#ffffff" filter="url(#shadow)">
+    <rect x="210" y="290" width="180" height="135" rx="28" opacity=".9"/>
+    <rect x="245" y="250" width="110" height="62" rx="16" opacity=".9"/>
+  </g>
+  <g stroke="#13a886" stroke-width="12" fill="none" stroke-linecap="round">
+    <path d="M250 360h100M275 390h50M302 300v-42"/>
+  </g>
+  <g fill="#ff8a3d">
+    <circle cx="490" cy="510" r="20"/><circle cx="930" cy="510" r="20"/><circle cx="685" cy="260" r="18"/>
+  </g>
+  <path d="M390 350C445 330 455 420 520 400" stroke="#f5b700" stroke-width="9" fill="none" stroke-linecap="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="58" y="56" width="470" height="126" rx="34" fill="#ffffff" opacity=".92"/>
+    <text x="96" y="112" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="38" font-weight="900" fill="#17324d">电力系统及其自动化</text>
+    <text x="96" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#5f7288">Substation · Transmission · Dispatch</text>
+  </g>
+</svg>
