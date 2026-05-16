@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>电气工程及其自动化学习平台 v6 AI版</title>
+  <meta name="description" content="电气工程及其自动化科技前沿、研究方向、专业课程、B站视频资源、3D交互动画与课程拓扑图学习平台。" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./v4.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav-shell">
+      <a class="brand" href="#home">
+        <span class="brand-icon">⚡</span>
+        <span>
+          <strong>电气工程及其自动化</strong>
+          <small>学习平台 v6 AI版</small>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="打开导航菜单">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#frontiers">科技前沿</a>
+        <a href="#directions">研究方向</a>
+        <a href="#courses">课程讲解</a>
+        <a href="#ai-assistant">AI助手</a>
+        <a href="#lab3d">3D实验室</a>
+        <a href="#videos">视频资源</a>
+        <a href="#roadmap">学习路线</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Electrical Engineering · Automation · Smart Energy</p>
+        <h1>从专业入门到科技前沿的电气工程可视化学习平台</h1>
+        <p class="hero-desc">
+          v4 重点修复研究方向图片加载问题，并将课程拓扑图按照培养方案扩展为四年多学期地图。
+          研究方向优先加载在线实景图片，网络失败时自动切换到本地备用图。
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#frontiers">查看科技前沿</a>
+          <a class="btn secondary" href="#lab3d">体验 3D 实验室</a>
+          <a class="btn plain" href="#roadmap">查看课程拓扑图</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong id="metricFrontier">8</strong><span>科技前沿</span></div>
+          <div><strong id="metricDirection">6</strong><span>研究方向</span></div>
+          <div><strong id="metricCourse">8</strong><span>核心课程</span></div>
+          <div><strong>5</strong><span>3D演示</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="energy-map-card">
+          <div class="map-node n1">新能源</div>
+          <div class="map-node n2">电力电子</div>
+          <div class="map-node n3">智能电网</div>
+          <div class="map-node n4">电机驱动</div>
+          <div class="map-node n5">AI调度</div>
+          <div class="map-line l1"></div>
+          <div class="map-line l2"></div>
+          <div class="map-line l3"></div>
+          <div class="map-line l4"></div>
+          <div class="map-core">EEA</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-strip">
+      <article>
+        <span>01</span>
+        <h3>科技前沿</h3>
+        <p>从新型电力系统、构网型逆变器到虚拟电厂与宽禁带功率器件。</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>研究方向扩写</h3>
+        <p>每个方向都包含研究对象、关键问题、常用方法、应用场景和课程关联。</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>3D交互升级</h3>
+        <p>本地 Canvas 动画，支持拖拽、滚轮、轨迹、标签、密度和视角控制。</p>
+      </article>
+      <article>
+        <span>04</span>
+        <h3>课程拓扑图</h3>
+        <p>用可点击节点展示从数学物理到电力系统、控制和智能电网的学习关系。</p>
+      </article>
+    </section>
+
+    <section class="section" id="frontiers">
+      <div class="section-heading">
+        <p class="eyebrow">Technology Frontiers</p>
+        <h2>如今电气工程及其自动化的科技前沿</h2>
+        <p>
+          电气工程的前沿正在从“单一设备研究”走向“新能源、电网、功率器件、控制算法、数据智能和市场机制”的交叉融合。
+          下列卡片可作为专业学习和毕业设计选题的方向参考。
+        </p>
+      </div>
+
+      <div class="frontier-grid" id="frontierGrid"></div>
+    </section>
+
+    <section class="section pale" id="directions">
+      <div class="section-heading">
+        <p class="eyebrow">Research Directions</p>
+        <h2>研究方向：更完整的专业画像</h2>
+        <p>
+          研究方向不只是名称，而是由“研究对象、核心问题、技术方法、典型场景、对应课程”共同组成。
+          点击每张卡片可以切换重点内容。
+        </p>
+      </div>
+      <div class="direction-grid" id="directionGrid"></div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="section-heading">
+        <p class="eyebrow">Course Explorer</p>
+        <h2>专业课程讲解</h2>
+        <p>选择课程后可查看学习目标、知识重点、先修课程、学习建议和 B 站资源入口。</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-box">
+          <span>🔎</span>
+          <input id="courseSearch" type="search" placeholder="搜索课程，例如：电机、电磁场、数字电子、电力系统" />
+        </div>
+        <div class="chip-row" id="categoryChips"></div>
+      </div>
+
+      <div class="course-layout">
+        <aside class="course-list" id="courseList"></aside>
+        <article class="course-detail" id="courseDetail"></article>
+      </div>
+    </section>
+
+
+    <section class="section ai-section" id="ai-assistant">
+      <div class="section-heading">
+        <p class="eyebrow">AI Assistant</p>
+        <h2>电气工程 AI 学习助手</h2>
+        <p>
+          接入大模型后，你可以直接向它提问专业概念、课程学习方法、研究方向、公式理解和工程应用。
+          API Key 不会写在前端代码里，而是由 Render Web Service 的环境变量安全保存。
+        </p>
+      </div>
+
+      <div class="ai-layout">
+        <aside class="ai-tips">
+          <h3>你可以这样问</h3>
+          <button class="ai-suggestion" data-question="什么是三相旋转磁场？请结合电机学解释。">什么是三相旋转磁场？</button>
+          <button class="ai-suggestion" data-question="工程电磁场中的散度和旋度怎么理解？">散度和旋度怎么理解？</button>
+          <button class="ai-suggestion" data-question="电力系统潮流计算到底在算什么？">潮流计算在算什么？</button>
+          <button class="ai-suggestion" data-question="模拟电子技术和数字电子技术有什么区别？应该先学哪一个？">模电和数电有什么区别？</button>
+          <button class="ai-suggestion" data-question="构网型逆变器为什么是新型电力系统的前沿方向？">构网型逆变器为什么重要？</button>
+        </aside>
+
+        <div class="ai-box">
+          <div id="aiMessages" class="ai-messages">
+            <div class="ai-message assistant">
+你好，我是电气工程及其自动化 AI 学习助手。你可以问我专业课程、研究方向、学习路线、公式含义或工程应用。
+            </div>
+          </div>
+
+          <form id="aiForm" class="ai-form">
+            <input
+              id="aiInput"
+              type="text"
+              placeholder="输入你的问题，例如：电机为什么会转？"
+              autocomplete="off"
+            />
+            <button class="btn primary" type="submit">发送</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pale" id="lab3d">
+      <div class="section-heading">
+        <p class="eyebrow">Interactive 3D Animation Lab</p>
+        <h2>交互式 3D 动画实验室：升级版</h2>
+        <p>
+          本实验室使用本地 Canvas 3D 投影实现，不依赖外部三维库。你可以拖拽旋转、滚轮缩放，
+          调整动画速度、强度、粒子密度，并开关轨迹与标签。
+        </p>
+      </div>
+
+      <div class="lab-shell">
+        <aside class="lab-controls">
+          <div class="control-block">
+            <label for="demoSelect">演示主题</label>
+            <select id="demoSelect">
+              <option value="em">工程电磁场：电荷、电场线与等势面</option>
+              <option value="motor">电机学：三相旋转磁场</option>
+              <option value="analog">模拟电子技术：信号放大</option>
+              <option value="digital">数字电子技术：逻辑电平与时钟</option>
+              <option value="power">电力系统分析：发电-输电-负荷网络</option>
+            </select>
+          </div>
+
+          <div class="control-block">
+            <div class="range-head">
+              <label for="speedRange">动画速度</label>
+              <output id="speedValue">1.0x</output>
+            </div>
+            <input id="speedRange" type="range" min="0.1" max="3" step="0.1" value="1" />
+          </div>
+
+          <div class="control-block">
+            <div class="range-head">
+              <label for="intensityRange">强度 / 幅值</label>
+              <output id="intensityValue">1.0</output>
+            </div>
+            <input id="intensityRange" type="range" min="0.4" max="2.4" step="0.1" value="1" />
+          </div>
+
+          <div class="control-block">
+            <div class="range-head">
+              <label for="densityRange">粒子 / 线条密度</label>
+              <output id="densityValue">1.0</output>
+            </div>
+            <input id="densityRange" type="range" min="0.5" max="2.2" step="0.1" value="1" />
+          </div>
+
+          <div class="toggle-grid">
+            <label><input type="checkbox" id="trailToggle" checked /> 显示轨迹</label>
+            <label><input type="checkbox" id="labelToggle" checked /> 显示标签</label>
+            <label><input type="checkbox" id="axisToggle" checked /> 显示坐标轴</label>
+          </div>
+
+          <div class="button-grid">
+            <button class="btn tiny" id="resetViewBtn">重置视角</button>
+            <button class="btn tiny secondary" id="pauseBtn">暂停动画</button>
+            <button class="btn tiny secondary" id="topViewBtn">俯视图</button>
+            <button class="btn tiny secondary" id="sideViewBtn">侧视图</button>
+          </div>
+
+          <div class="concept-card">
+            <h3 id="conceptTitle">工程电磁场</h3>
+            <p id="conceptText"></p>
+            <ul id="conceptBullets"></ul>
+          </div>
+        </aside>
+
+        <div class="canvas-panel">
+          <canvas id="labCanvas"></canvas>
+          <div class="canvas-toolbar">
+            <span>拖拽旋转</span>
+            <span>滚轮缩放</span>
+            <span>滑块实时控制</span>
+            <span id="labStatus">运行中</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="section-heading">
+        <p class="eyebrow">Bilibili Resources</p>
+        <h2>可直接点击查看的哔哩哔哩课程资源</h2>
+        <p>每门课都提供可点击入口，点击后会在新标签页打开对应的 B 站视频或课程页。</p>
+      </div>
+      <div class="resource-grid" id="resourceGrid"></div>
+    </section>
+
+    <section class="section pale" id="roadmap">
+      <div class="section-heading">
+        <p class="eyebrow">Learning Roadmap & Topology</p>
+        <h2>四年多学期课程拓扑图</h2>
+        <p>
+          参考你提供的培养方案图，本版把课程从少量核心课扩展为覆盖四年多学期的课程地图。不同颜色代表课程类型，箭头表示推荐前置关系；点击课程卡片会高亮相关课程。
+        </p>
+      </div>
+
+      <div class="roadmap-layout">
+        <div class="road-stage-wrap" id="roadStageWrap"></div>
+        <div class="topology-card">
+          <div class="topology-head">
+            <h3>课程关系拓扑图</h3>
+            <p id="topologyInfo">点击节点查看课程说明。箭头表示推荐学习依赖。</p>
+          </div>
+          <svg id="courseGraph" viewBox="0 0 1120 640" role="img" aria-label="课程拓扑图"></svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>电气工程及其自动化学习平台 v6 AI版</strong>
+    <p>本地可运行 <code>app.py</code> 预览；部署 AI 版时使用 Render Web Service 运行 <code>server.js</code>。研究方向图片支持在线资源与本地备用图，课程拓扑图已参考培养方案扩展。</p>
+  </footer>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+  <script src="./v4-upgrades.js"></script>
+</body>
+</html>

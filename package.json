@@ -1,0 +1,15 @@
+{
+  "name": "eea-ai-website",
+  "version": "1.0.0",
+  "description": "电气工程及其自动化学习平台：Render Web Service + OpenAI API 后端版本",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
